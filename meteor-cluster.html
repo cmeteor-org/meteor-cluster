@@ -4,7 +4,7 @@
 
 <body>
   <h1>Welcome to Meteor Cluster!</h1>
-  <h3>You can execute self defined function at server. Example:</h3>
+  <h3>In brower console you can execute `some code` at server. Example:</h3>
   <p>
     Meteor.call('exec', "(function(){return process.env.ROOT_URL + '|' + process.pid;})()",function(err, rel) {console.log('root url:', rel)});
   </p>
