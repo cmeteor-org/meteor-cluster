@@ -1,0 +1,19 @@
+<head>
+  <title>meteor-cluster</title>
+</head>
+
+<body>
+  <h1>Welcome to Meteor Cluster!</h1>
+  <h3>You can execute self defined function at server. Example:</h3>
+  <p>
+    Meteor.call('exec', "(function(){return process.env.ROOT_URL + '|' + process.pid;})()",function(err, rel) {console.log('root url:', rel)});
+  </p>
+  <p>
+    Meteor.call('exec', "( function(){return require('os').cpus().length;} )()", function(err, rel) { console.log('os cpus nums:', rel); });
+  </p>
+  {{> hello}}
+</body>
+
+<template name="hello">
+  <h3>{{rootUrl}}</h3>
+</template>
